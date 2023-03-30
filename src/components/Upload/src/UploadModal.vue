@@ -191,6 +191,7 @@
               filename: props.filename,
             },
             function onUploadProgress(progressEvent: ProgressEvent) {
+              alert(1);
               const complete = ((progressEvent.loaded / progressEvent.total) * 100) | 0;
               item.percent = complete;
             },

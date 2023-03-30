@@ -12,6 +12,7 @@ export function uploadApi(
   params: UploadFileParams,
   onUploadProgress: (progressEvent: ProgressEvent) => void,
 ) {
+  console.log('UploadFileParams');
   return defHttp.uploadFile<UploadApiResult>(
     {
       url: uploadUrl,
