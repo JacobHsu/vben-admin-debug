@@ -180,6 +180,7 @@
         }
         try {
           console.log('uploadApiByItem', props.api);
+          console.log(1111, props.uploadParams, props.name);
           item.status = UploadResultStatus.UPLOADING;
           const { data } = await props.api?.(
             {
