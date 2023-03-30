@@ -179,6 +179,7 @@
           return warn('upload api must exist and be a function');
         }
         try {
+          console.log('uploadApiByItem', props.api);
           item.status = UploadResultStatus.UPLOADING;
           const { data } = await props.api?.(
             {
