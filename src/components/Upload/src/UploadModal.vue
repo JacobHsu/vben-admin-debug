@@ -199,6 +199,8 @@
               item.percent = complete;
             },
           );
+          alert(5);
+          console.log('await props.api', data);
           item.status = UploadResultStatus.SUCCESS;
           item.responseData = data;
           return {

@@ -145,7 +145,7 @@ export class VAxios {
     }
     console.log('before axiosInstance');
     alert(3);
-    return this.axiosInstance.request<T>({
+    const res = this.axiosInstance.request<T>({
       ...config,
       method: 'POST',
       data: formData,
@@ -155,6 +155,8 @@ export class VAxios {
         ignoreCancelToken: true,
       },
     });
+    console.log('axiosInstance', res);
+    return res;
   }
 
   // support form-data
