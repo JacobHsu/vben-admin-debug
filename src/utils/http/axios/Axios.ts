@@ -123,7 +123,7 @@ export class VAxios {
   uploadFile<T = any>(config: AxiosRequestConfig, params: UploadFileParams) {
     const formData = new window.FormData();
     const customFilename = params.name || 'file';
-    console.log('uploadFile');
+
     if (params.filename) {
       formData.append(customFilename, params.file, params.filename);
     } else {
@@ -143,8 +143,8 @@ export class VAxios {
         formData.append(key, params.data![key]);
       });
     }
-    console.log('before axiosInstance');
-    alert(3);
+    console.log('uploadFile before axiosInstance config', config);
+    alert(2);
     const res = this.axiosInstance.request<T>({
       ...config,
       method: 'POST',

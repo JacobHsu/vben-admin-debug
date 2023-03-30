@@ -182,7 +182,7 @@
           console.log('uploadApiByItem', props.api);
           console.log(1111, props.uploadParams, props.name);
           item.status = UploadResultStatus.UPLOADING;
-          alert(1);
+
           const { data } = await props.api?.(
             {
               data: {
