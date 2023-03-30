@@ -193,6 +193,7 @@
             },
             function onUploadProgress(progressEvent: ProgressEvent) {
               alert(1);
+              console.log('onUploadProgress');
               const complete = ((progressEvent.loaded / progressEvent.total) * 100) | 0;
               item.percent = complete;
             },
